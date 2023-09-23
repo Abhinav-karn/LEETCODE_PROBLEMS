@@ -1,0 +1,15 @@
+#include <bits/stdc++.h> 
+vector<int> rotateArray(vector<int>& arr, int n) {
+
+    /*int temp=arr[0];
+    for(int i=1;i<n;i++){
+        arr[i-1]=arr[i];        //brute force method
+    }
+    arr[n-1]=temp;*/
+    
+    int k =1;
+    reverse(arr.begin(),arr.begin()+k);
+    reverse(arr.begin()+k,arr.end());   //optimal solution
+    reverse(arr.begin(),arr.end());
+    return arr;
+}
